@@ -1,4 +1,9 @@
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
 
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function () {
     const langSelect = document.getElementById('lang-select');
