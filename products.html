@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Home Yarn</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Home Yarn</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" data-lang="navbar.home">Home</a></li>
+                <li><a href="about.html" data-lang="navbar.about">About Us</a></li>
+                <li><a href="products.html" data-lang="navbar.products">Products</a></li>
+                <li><a href="contact.html" data-lang="navbar.contact">Contact Us</a></li>
+            </ul>
+            <div class="language-switcher">
+                <select id="lang-select">
+                    <option value="en">EN</option>
+                    <option value="ar">AR</option>
+                    <option value="tr">TR</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Our Product Range</h1>
+        </section>
+
+        <section class="product-tabs">
+            <div class="tabs">
+                <button class="tab-link active" onclick="openTab(event, 'all')">All</button>
+                <button class="tab-link" onclick="openTab(event, 'aty')">ATY</button>
+                <button class="tab-link" onclick="openTab(event, 'dty')">DTY</button>
+                <button class="tab-link" onclick="openTab(event, 'specialty')">Specialty</button>
+            </div>
+
+            <div id="all" class="tab-content" style="display: block;">
+                <!-- All products will be shown here -->
+            </div>
+            <div id="aty" class="tab-content">
+                <h2 data-lang="products.aty.title"></h2>
+                <p data-lang="products.aty.description"></p>
+                <div class="specs-grid">
+                    <div class="spec-block" data-lang="products.aty.specs.denier_range"></div>
+                    <div class="spec-block" data-lang="products.aty.specs.color_white"></div>
+                    <div class="spec-block" data-lang="products.aty.specs.color_dyed"></div>
+                    <div class="spec-block" data-lang="products.aty.specs.super_shrink"></div>
+                    <div class="spec-block" data-lang="products.aty.specs.flush"></div>
+                </div>
+            </div>
+
+            <div id="dty" class="tab-content">
+                <h2 data-lang="products.dty.title"></h2>
+                <p data-lang="products.dty.description"></p>
+                <table class="specs-table">
+                    <tr>
+                        <td>Denier Range</td>
+                        <td data-lang="products.dty.specs.denier_range"></td>
+                    </tr>
+                    <tr>
+                        <td>Structure</td>
+                        <td data-lang="products.dty.specs.structure"></td>
+                    </tr>
+                    <tr>
+                        <td>Colors</td>
+                        <td data-lang="products.dty.specs.colors"></td>
+                    </tr>
+                    <tr>
+                        <td>Warp Yarn</td>
+                        <td data-lang="products.dty.specs.warp_yarn"></td>
+                    </tr>
+                    <tr>
+                        <td>Weft Yarn</td>
+                        <td data-lang="products.dty.specs.weft_yarn"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="specialty" class="tab-content">
+                <div class="product-card">
+                    <h3 data-lang="products.specialty.like_cotton.title"></h3>
+                    <p data-lang="products.specialty.like_cotton.description"></p>
+                    <p data-lang="products.specialty.like_cotton.usage"></p>
+                </div>
+                <div class="product-card">
+                    <h3 data-lang="products.specialty.melange.title"></h3>
+                    <p data-lang="products.specialty.melange.description"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Home Yarn</h3>
+                <p data-lang="footer.company_legal_name"></p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" data-lang="navbar.home">Home</a></li>
+                    <li><a href="about.html" data-lang="navbar.about">About Us</a></li>
+                    <li><a href="products.html" data-lang="navbar.products">Products</a></li>
+                    <li><a href="contact.html" data-lang="navbar.contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 data-lang="footer.address_label">Address</h3>
+                <p data-lang="footer.address_value"></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Home Yarn Textile Spinning Co. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/lang.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

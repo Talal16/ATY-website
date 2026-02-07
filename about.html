@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Home Yarn</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Home Yarn</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" data-lang="navbar.home">Home</a></li>
+                <li><a href="about.html" data-lang="navbar.about">About Us</a></li>
+                <li><a href="products.html" data-lang="navbar.products">Products</a></li>
+                <li><a href="contact.html" data-lang="navbar.contact">Contact Us</a></li>
+            </ul>
+            <div class="language-switcher">
+                <select id="lang-select">
+                    <option value="en">EN</option>
+                    <option value="ar">AR</option>
+                    <option value="tr">TR</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Who We Are</h1>
+        </section>
+
+        <section class="vision-mission">
+            <div class="card">
+                <div class="card-icon">
+                    <img src="https://picsum.photos/seed/eye/100" alt="Vision">
+                </div>
+                <h2 data-lang="about.vision.title"></h2>
+                <p data-lang="about.vision.content"></p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <img src="https://picsum.photos/seed/rocket/100" alt="Mission">
+                </div>
+                <h2 data-lang="about.mission.title"></h2>
+                <p data-lang="about.mission.content"></p>
+            </div>
+        </section>
+
+        <section class="goals">
+            <h2 data-lang="about.goals.title"></h2>
+            <ul>
+                <li><span class="checkmark">✓</span> <span data-lang-list-item="about.goals.list.0"></span></li>
+                <li><span class="checkmark">✓</span> <span data-lang-list-item="about.goals.list.1"></span></li>
+                <li><span class="checkmark">✓</span> <span data-lang-list-item="about.goals.list.2"></span></li>
+                <li><span class="checkmark">✓</span> <span data-lang-list-item="about.goals.list.3"></span></li>
+                <li><span class="checkmark">✓</span> <span data-lang-list-item="about.goals.list.4"></span></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Home Yarn</h3>
+                <p data-lang="footer.company_legal_name"></p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" data-lang="navbar.home">Home</a></li>
+                    <li><a href="about.html" data-lang="navbar.about">About Us</a></li>
+                    <li><a href="products.html" data-lang="navbar.products">Products</a></li>
+                    <li><a href="contact.html" data-lang="navbar.contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 data-lang="footer.address_label">Address</h3>
+                <p data-lang="footer.address_value"></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Home Yarn Textile Spinning Co. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/lang.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
