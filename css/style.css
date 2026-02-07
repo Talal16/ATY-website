@@ -1,4 +1,17 @@
 /* Global Design Guidelines */
+/* عربي */
+html[lang="ar"] {
+    font-family: "Cairo", sans-serif;
+    direction: rtl;
+}
+
+/* إنجليزي + تركي */
+html[lang="en"],
+html[lang="tr"] {
+    font-family: "Poppins", sans-serif;
+    direction: ltr;
+}
+
 body {
     font-family: 'Roboto', 'Cairo', 'Tajawal', sans-serif;
     margin: 0;
