@@ -49,7 +49,7 @@ body {
     background: none;
     border: none;
     color: #ffffff;
-    margin-right: 1rem;
+    margin-inline: 1rem;
     font-size: 1.5rem;
     cursor: pointer;
 }
@@ -170,6 +170,7 @@ footer {
 }
 
 .hero-content p {
+    padding-inline: 3rem;
     font-size: 1.25rem;
     margin-bottom: 2rem;
 }
@@ -403,7 +404,7 @@ footer {
 
     .nav-links {
         position: absolute;
-        top: 70px;
+        top: 50px;
         right: 0;
         width: 100%;
         background-color: var(--primary-color);
@@ -422,9 +423,14 @@ footer {
         max-height: 300px;
     }
 
-    .language-switcher {
-        display: none; /* تخفيها أو تحطها جوه المنيو */
+    
+
+    .hero-content h1{
+        font-size: 2.5rem;
     }
+ .hero-content p {
+        padding-inline: 0;
+ }
 }
 
 /* responsive */
