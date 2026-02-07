@@ -1,4 +1,17 @@
 /* Global Design Guidelines */
+/* عربي */
+html[lang="ar"] {
+    font-family: "Cairo", sans-serif;
+    direction: rtl;
+}
+
+/* إنجليزي + تركي */
+html[lang="en"],
+html[lang="tr"] {
+    font-family: "Poppins", sans-serif;
+    direction: ltr;
+}
+
 body {
     font-family: 'Roboto', 'Cairo', 'Tajawal', sans-serif;
     margin: 0;
@@ -19,16 +32,27 @@ body {
 .navbar {
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding-inline: 1rem;
+    padding-block: 1rem ;
     background-color: var(--primary-color);
     color: #ffffff;
-    z-index: 1000;
+    z-index: 100;
 }
-
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffffff;
+    margin-inline: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
 .navbar .logo a {
     color: #ffffff;
     text-decoration: none;
@@ -71,12 +95,15 @@ body {
 .nav-links a.active {
     font-weight: bold;
 }
-
+.language-switcher{
+    margin-right: 40px;
+}
 .language-switcher select {
     background-color: transparent;
     color: #ffffff;
     border: 1px solid #ffffff;
     padding: 0.25rem;
+    
     border-radius: 4px;
 }
 
@@ -143,6 +170,7 @@ footer {
 }
 
 .hero-content p {
+    padding-inline: 3rem;
     font-size: 1.25rem;
     margin-bottom: 2rem;
 }
@@ -363,3 +391,46 @@ footer {
     height: 100%;
     border-radius: 8px;
 }
+
+/* responsive */
+
+/* navbar */
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        flex-direction: column;
+        align-items: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .nav-links.active {
+        max-height: 300px;
+    }
+
+    
+
+    .hero-content h1{
+        font-size: 2.5rem;
+    }
+ .hero-content p {
+        padding-inline: 0;
+ }
+}
+
+/* responsive */
