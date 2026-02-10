@@ -10,21 +10,26 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html">Home Yarn</a>
+                <a href="index.html"><img src="assets/companyLogo.jpeg" alt="Home Yarn"></a>
             </div>
+            <button id="mobile-menu-btn" class="hamburger" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html" data-lang="navbar.home">Home</a></li>
                 <li><a href="about.html" data-lang="navbar.about">About Us</a></li>
                 <li><a href="products.html" data-lang="navbar.products">Products</a></li>
                 <li><a href="contact.html" data-lang="navbar.contact">Contact Us</a></li>
+                <li class="lang-wrapper">
+                    <select id="lang-select">
+                        <option value="en">EN</option>
+                        <option value="ar">AR</option>
+                        <option value="tr">TR</option>
+                    </select>
+                </li>
             </ul>
-            <div class="language-switcher">
-                <select id="lang-select">
-                    <option value="en">EN</option>
-                    <option value="ar">AR</option>
-                    <option value="tr">TR</option>
-                </select>
-            </div>
         </nav>
     </header>
 
@@ -41,22 +46,22 @@
         <section class="intro">
             <div class="intro-container">
                 <div class="intro-image">
-                    <img src="https://picsum.photos/seed/yarn/800/600" alt="Yarn Fibers">
+                    <img src="assets/product1.jpeg" alt="Yarn Fibers">
                 </div>
                 <div class="intro-text">
                     <h2>Welcome to Home Yarn.</h2>
                     <p data-lang="home.hero_description"></p>
                     <div class="features">
                         <div class="feature">
-                            <img src="https://picsum.photos/seed/shield/100" alt="Strength">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                             <span>Strength</span>
                         </div>
                         <div class="feature">
-                            <img src="https://picsum.photos/seed/feather/100" alt="Softness">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg>
                             <span>Softness</span>
                         </div>
                         <div class="feature">
-                            <img src="https://picsum.photos/seed/factory/100" alt="Performance">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
                             <span>Performance</span>
                         </div>
                     </div>

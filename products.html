@@ -10,21 +10,26 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html">Home Yarn</a>
+                <a href="index.html"><img src="assets/companyLogo.jpeg" alt="Home Yarn"></a>
             </div>
+            <button id="mobile-menu-btn" class="hamburger" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html" data-lang="navbar.home">Home</a></li>
                 <li><a href="about.html" data-lang="navbar.about">About Us</a></li>
                 <li><a href="products.html" data-lang="navbar.products">Products</a></li>
                 <li><a href="contact.html" data-lang="navbar.contact">Contact Us</a></li>
+                <li class="lang-wrapper">
+                    <select id="lang-select">
+                        <option value="en">EN</option>
+                        <option value="ar">AR</option>
+                        <option value="tr">TR</option>
+                    </select>
+                </li>
             </ul>
-            <div class="language-switcher">
-                <select id="lang-select">
-                    <option value="en">EN</option>
-                    <option value="ar">AR</option>
-                    <option value="tr">TR</option>
-                </select>
-            </div>
         </nav>
     </header>
 
