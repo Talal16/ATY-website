@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Handle language selection change
     langSelect.addEventListener('change', () => {
         updateLanguage(langSelect.value);
+        localStorage.setItem('lang', langSelect.value);
     });
 
     // Set initial language from local storage or default to 'en'
@@ -69,6 +70,39 @@ document.addEventListener('DOMContentLoaded', function () {
         allContent.innerHTML = allHTML;
     }
 
+    // Mobile Menu Toggle Logic
+    // Requires HTML element with ID 'mobile-menu-btn' and nav container with class 'nav-links'
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navLinksContainer = document.querySelector('.nav-links');
+
+    if (mobileMenuBtn && navLinksContainer) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            navLinksContainer.classList.toggle('active');
+        });
+
+        // Close mobile menu when a link is clicked to improve UX
+        const menuLinks = navLinksContainer.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                navLinksContainer.classList.remove('active');
+            });
+        });
+    }
+
+    // Handle language switch buttons
+    // Example HTML: <button data-lang-switch="ar">العربية</button>
+    const langSwitchBtns = document.querySelectorAll('[data-lang-switch]');
+    langSwitchBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default action if it's a link
+            const lang = btn.getAttribute('data-lang-switch');
+            if (langSelect) langSelect.value = lang; // Sync the select dropdown
+            updateLanguage(lang); // Update the content
+            localStorage.setItem('lang', lang); // Save preference
+        });
+    });
 
 });
 
@@ -82,4 +116,3 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).style.display = 'block';
     evt.currentTarget.classList.add('active');
 }
-
